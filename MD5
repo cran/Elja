@@ -1,0 +1,12 @@
+ab1d0759f99f72321b6eb39f63b763bb *DESCRIPTION
+fc21b3037fc8957203cd494dbd8a8da1 *NAMESPACE
+980aa2ef93e72f558250811b8b22a776 *R/Elja.R
+7236d6e7bbb621bcf114cd0dcb47b61c *R/zzz.R
+d0d1b9715c0933408a0a21c5a6d84ca2 *build/vignette.rds
+2733209125bddd0ae25882b99689a846 *inst/doc/Elja.R
+05b3ae50cf0c509cbcd952ad04640059 *inst/doc/Elja.Rmd
+b37482f3f77dfc6f4d9d98cf65c1e2da *inst/doc/Elja.html
+63faef979f7bc5c3f7b6e7fab78ab0b1 *man/ELJAglm.Rd
+3129c83239a66ed0c2427062b8154760 *man/ELJAlinear.Rd
+b3a29ef0947552c229606147f493d056 *man/ELJAlogistic.Rd
+05b3ae50cf0c509cbcd952ad04640059 *vignettes/Elja.Rmd
