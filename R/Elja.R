@@ -25,14 +25,14 @@ utils::globalVariables(c("odd_ratio", "coefficients"))
 #' @export
 #'
 #' @examples
-#' ### Loading the PIMA dataset contained in the mlbench package
+#' ### Loading the synthetic diabetes dataset contained in the mlbench package
 #'
 #' library(mlbench)
-#' data(PimaIndiansDiabetes)
+#' data(SynthDiabetes)
 #'
 #' ### Using ELJAlinear to perform EWAS analysis
 #'
-#' ELJAlinear(var = 'pregnant',data = PimaIndiansDiabetes,manplot = TRUE,
+#' ELJAlinear(var = 'pregnant',data = SynthDiabetes,manplot = TRUE,
 #' Bonferroni = TRUE,FDR = TRUE, nbvalmanplot = 30, manplotsign = FALSE)
 #' results
 #'
@@ -41,8 +41,7 @@ utils::globalVariables(c("odd_ratio", "coefficients"))
 #'@references
 #' Dunn OJ. Multiple Comparisons Among Means. Journal of the American Statistical Association. 1961;56(293):52‑64.
 #' Benjamini Y, Hochberg Y. Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. Journal of the Royal Statistical Society: Series B (Methodological). 1995;57(1):289‑300.
-#' MLBench · Distributed Machine Learning Benchmark. Available from: https://mlbench.github.io/
-#' Smith JW, Everhart JE, Dickson WC, Knowler WC, Johannes RS. Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proc Annu Symp Comput Appl Med Care. 1988 Nov 9;261–5.
+#' Leisch F, Dimitriadou E. mlbench: Machine Learning Benchmark Problems. R package version 2.1-11; 2025. Available from: https://CRAN.R-project.org/package=mlbench
 #'
 #'
 ELJAlinear <- function(var, var_adjust = NULL, data,
@@ -289,22 +288,21 @@ ELJAlinear <- function(var, var_adjust = NULL, data,
 #' @export
 #'
 #' @examples
-#' ### Loading the PIMA dataset contained in the mlbench package
+#' ### Loading the synthetic diabetes dataset contained in the mlbench package
 #'
 #' library(mlbench)
-#' data(PimaIndiansDiabetes)
+#' data(SynthDiabetes)
 #'
 #' ### Using ELJAlinear to perform EWAS analysis
 #'
-#' ELJAlogistic(var = 'diabetes',data = PimaIndiansDiabetes,manplot = TRUE,
+#' ELJAlogistic(var = 'diabetes',data = SynthDiabetes,manplot = TRUE,
 #' Bonferroni = TRUE,FDR = TRUE, nbvalmanplot = 30, manplotsign = FALSE)
 #' results
 #'
 #'@references
 #' Dunn OJ. Multiple Comparisons Among Means. Journal of the American Statistical Association. 1961;56(293):52‑64.
 #' Benjamini Y, Hochberg Y. Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. Journal of the Royal Statistical Society: Series B (Methodological). 1995;57(1):289‑300.
-#' MLBench · Distributed Machine Learning Benchmark. Available from: https://mlbench.github.io/
-#' Smith JW, Everhart JE, Dickson WC, Knowler WC, Johannes RS. Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proc Annu Symp Comput Appl Med Care. 1988 Nov 9;261–5.
+#' Leisch F, Dimitriadou E. mlbench: Machine Learning Benchmark Problems. R package version 2.1-11; 2025. Available from: https://CRAN.R-project.org/package=mlbench
 #'
 #'
 ELJAlogistic <- function(var, var_adjust = NULL, data,
@@ -561,14 +559,14 @@ ELJAlogistic <- function(var, var_adjust = NULL, data,
 #' @export
 #'
 #' @examples
-#' ### Loading the PIMA dataset contained in the mlbench package
+#' ### Loading the synthetic diabetes dataset contained in the mlbench package
 #'
 #' library(mlbench)
-#' data(PimaIndiansDiabetes)
+#' data(SynthDiabetes)
 #'
 #' ### Using ELJAlinear to perform EWAS analysis
 #'
-#' ELJAglm(var = 'diabetes',data = PimaIndiansDiabetes,
+#' ELJAglm(var = 'diabetes',data = SynthDiabetes,
 #' family = binomial(link = "logit"), manplot = TRUE, Bonferroni = TRUE,
 #' FDR = TRUE, nbvalmanplot = 30, manplotsign = FALSE)
 #' results
@@ -576,8 +574,7 @@ ELJAlogistic <- function(var, var_adjust = NULL, data,
 #'@references
 #' Dunn OJ. Multiple Comparisons Among Means. Journal of the American Statistical Association. 1961;56(293):52‑64.
 #' Benjamini Y, Hochberg Y. Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. Journal of the Royal Statistical Society: Series B (Methodological). 1995;57(1):289‑300.
-#' MLBench · Distributed Machine Learning Benchmark. Available from: https://mlbench.github.io/
-#' Smith JW, Everhart JE, Dickson WC, Knowler WC, Johannes RS. Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proc Annu Symp Comput Appl Med Care. 1988 Nov 9;261–5.
+#' Leisch F, Dimitriadou E. mlbench: Machine Learning Benchmark Problems. R package version 2.1-11; 2025. Available from: https://CRAN.R-project.org/package=mlbench
 #'
 #'
 ELJAglm <- function(var, var_adjust = NULL, family = binomial(link = "logit"), data,

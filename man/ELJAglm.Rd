@@ -42,14 +42,14 @@ A Dataframe with results for each variable of the model.
 A tool for Environment-Wide Association Studies (EnvWAS / EWAS) which are repeated analysis. This function is espacially for generalized linear models 'glm' and allows the addition of adjustment variables.
 }
 \examples{
-### Loading the PIMA dataset contained in the mlbench package
+### Loading the synthetic diabetes dataset contained in the mlbench package
 
 library(mlbench)
-data(PimaIndiansDiabetes)
+data(SynthDiabetes)
 
 ### Using ELJAlinear to perform EWAS analysis
 
-ELJAglm(var = 'diabetes',data = PimaIndiansDiabetes,
+ELJAglm(var = 'diabetes',data = SynthDiabetes,
 family = binomial(link = "logit"), manplot = TRUE, Bonferroni = TRUE,
 FDR = TRUE, nbvalmanplot = 30, manplotsign = FALSE)
 results
@@ -58,6 +58,5 @@ results
 \references{
 Dunn OJ. Multiple Comparisons Among Means. Journal of the American Statistical Association. 1961;56(293):52‑64.
 Benjamini Y, Hochberg Y. Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. Journal of the Royal Statistical Society: Series B (Methodological). 1995;57(1):289‑300.
-MLBench · Distributed Machine Learning Benchmark. Available from: https://mlbench.github.io/
-Smith JW, Everhart JE, Dickson WC, Knowler WC, Johannes RS. Using the ADAP Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proc Annu Symp Comput Appl Med Care. 1988 Nov 9;261–5.
+Leisch F, Dimitriadou E. mlbench: Machine Learning Benchmark Problems. R package version 2.1-11; 2025. Available from: https://CRAN.R-project.org/package=mlbench
 }

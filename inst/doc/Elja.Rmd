@@ -54,16 +54,15 @@ analysis. The second one, only for the significant values.
 This document introduces the basic use of this package in an EWAS analysis.
 
 
-## Data: PimaIndiansDiabetes
+## Data: SynthDiabetes
 
-In order to show in a simple way the use of the Elja package, we will use the 
-PIMA dataset. This dataset is present in the package mlbench 
-(https://mlbench.github.io/).
+In order to show in a simple way the use of the Elja package, we will use a synthetic diabetes dataset mimicking the original PIMA data. 
+This dataset is present in the package mlbench (https://CRAN.R-project.org/package=mlbench).
 
 ```{r}
 library(mlbench)
-data(PimaIndiansDiabetes)
-head(PimaIndiansDiabetes)
+data(SynthDiabetes)
+head(SynthDiabetes)
 ```
 
 This dataset containing a health event (diabetes) will allow us to to 
@@ -84,7 +83,7 @@ exposures: this will avoid making a model where we will include other outcomes.
 
 ```{r}
 
-str(PimaIndiansDiabetes)
+str(SynthDiabetes)
 
 ```
 
@@ -102,7 +101,7 @@ We have seen previously that our health event is binary categorical:
 Diabetes (Yes/No).
 
 ```{r}
-str(PimaIndiansDiabetes$diabetes)
+str(SynthDiabetes$diabetes)
 ```
 
 
@@ -144,7 +143,7 @@ only significant only the significant values with a p-value > 0.05.
 
 ```{r , fig.height = 5, fig.width = 8, fig.align = "center",message = FALSE}
 
-ELJAlogistic(var = 'diabetes',data = PimaIndiansDiabetes,manplot = TRUE,
+ELJAlogistic(var = 'diabetes',data = SynthDiabetes,manplot = TRUE,
              Bonferroni = TRUE,FDR = TRUE, nbvalmanplot = 30, manplotsign = FALSE)
 results
 
@@ -161,10 +160,7 @@ Statistical Association. 1961;56(293):52‑64.
 * Benjamini Y, Hochberg Y. Controlling the False Discovery Rate: A Practical 
 and Powerful Approach to Multiple Testing. Journal of the Royal Statistical 
 Society: Series B (Methodological). 1995;57(1):289‑300.
-* MLBench · Distributed Machine Learning Benchmark. Available from: https://mlbench.github.io/
-* Smith JW, Everhart JE, Dickson WC, Knowler WC, Johannes RS. Using the ADAP
-Learning Algorithm to Forecast the Onset of Diabetes Mellitus. Proc Annu Symp
-Comput Appl Med Care. 1988 Nov 9;261–5. 
+* Leisch F, Dimitriadou E. mlbench: Machine Learning Benchmark Problems. R package version 2.1-11; 2025. Available from: https://CRAN.R-project.org/package=mlbench
 
 
 

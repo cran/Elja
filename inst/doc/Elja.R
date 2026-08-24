@@ -1,25 +1,25 @@
 ## ----setup, message=FALSE-----------------------------------------------------
 library(Elja)
 
-## ---- include = F-------------------------------------------------------------
+## ----include = F--------------------------------------------------------------
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 
 ## -----------------------------------------------------------------------------
 library(mlbench)
-data(PimaIndiansDiabetes)
-head(PimaIndiansDiabetes)
+data(SynthDiabetes)
+head(SynthDiabetes)
 
 ## -----------------------------------------------------------------------------
 
-str(PimaIndiansDiabetes)
+str(SynthDiabetes)
 
 
 ## -----------------------------------------------------------------------------
-str(PimaIndiansDiabetes$diabetes)
+str(SynthDiabetes$diabetes)
 
-## ---- fig.height = 5, fig.width = 8, fig.align = "center",message = FALSE-----
+## ----fig.height = 5, fig.width = 8, fig.align = "center",message = FALSE------
 
-ELJAlogistic(var = 'diabetes',data = PimaIndiansDiabetes,manplot = TRUE,
+ELJAlogistic(var = 'diabetes',data = SynthDiabetes,manplot = TRUE,
              Bonferroni = TRUE,FDR = TRUE, nbvalmanplot = 30, manplotsign = FALSE)
 results
 
